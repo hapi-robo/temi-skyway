@@ -1,0 +1,13 @@
+*.env
+*.key
+*.cert
+*.apk
+webapp/node_modules/
+*.iml
+android/.gradle/
+android/local.properties
+android/.idea/
+android/build
+android/captures
+android/.externalNativeBuild
+android/.cxx
