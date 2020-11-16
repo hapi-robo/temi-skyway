@@ -3,15 +3,19 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express');
+const path = require("path");
 
 // constants
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 // instantiate webapp
 const app = express();
 
 // setup template engine
 app.set('view engine', 'ejs');
+
+// serve static files
+app.use(express.static(path.join(__dirname, "assets")));
 
 // set up routes
 app.get("/", (req, res) => 
